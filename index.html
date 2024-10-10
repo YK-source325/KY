@@ -3,69 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Curriculum di Yevhen Khara">
-    <title>Curriculum di Yevhen Khara</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Curriculum</title>
 </head>
 <body>
-    <a href="login.html">Accedi al sito</a>
-    <header>
-        <h1>Yevhen Khara</h1>
-        <p>Data di nascita: 22/03/1996 | Nazionalità: Ucraina</p>
-        <p>Contatti: <a href="mailto:yevhen.khara@gmail.com">yevhen.khara@gmail.com</a> | Telefono: +39 3341912395</p>
-        <p>Indirizzo: Via Rompiano 8, 22030 Sormano, Italia</p>
-    </header>
+    <h1>Benvenuto nel mio Curriculum</h1>
+    <p><a href="login.html">Accedi al sito</a></p>
+    <div id="curriculum-content" style="display:none;">
+        <!-- Qui puoi inserire il tuo curriculum -->
+        <h2>Informazioni</h2>
+        <p>Nome: Tuo Nome</p>
+        <p>Esperienza: Tua Esperienza</p>
+    </div>
 
-    <main>
-        <section>
-            <h2>Esperienza Lavorativa</h2>
-            <ul>
-                <li>
-                    <strong>08/04/2024 – 31/10/2024</strong>
-                    <p>Chef de Rang - Servizio Sala, Hilton Lake Como</p>
-                    <p>Indirizzo: <a href="https://www.hilton.com/en/hotels/mxpcohi-hilton-lake-como/">Hilton Lake Como</a></p>
-                </li>
-                <!-- Aggiungi qui altre esperienze lavorative -->
-            </ul>
-        </section>
+    <script>
+        const curriculumContent = document.getElementById('curriculum-content');
 
-        <section>
-            <h2>Istruzione e Formazione</h2>
-            <ul>
-                <li>
-                    <strong>12/09/2017 – 11/06/2018</strong>
-                    <p>Operatore della ristorazione, Agenzia per la Formazione, l'Orientamento ed il Lavoro della Provincia di Como</p>
-                    <p>Voto finale: 97/100</p>
-                    <p>Sito: <a href="http://www.cfpcomo.com/">cfpcomo.com</a></p>
-                </li>
-                <!-- Aggiungi qui altre formazioni -->
-            </ul>
-        </section>
+        // Controlla se l'utente è autenticato
+        const isAuthenticated = sessionStorage.getItem('authenticated');
 
-        <section>
-            <h2>Competenze Linguistiche</h2>
-            <ul>
-                <li>Ucraino (madrelingua)</li>
-                <li>Russo (fluente)</li>
-                <li>Italiano (livello A1-A2)</li>
-                <li>Inglese (livello A1-A2)</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Competenze Digitali</h2>
-            <ul>
-                <li>Utilizzo pratico di software e strumenti informatici</li>
-                <li>Gestione email</li>
-                <li>Pacchetto Office</li>
-                <li>Utilizzo del browser e dei social network</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>Autorizzo il trattamento dei dati personali ai sensi del GDPR.</p>
-        <p>&copy; 2024 Yevhen Khara. Tutti i diritti riservati.</p>
-    </footer>
+        if (isAuthenticated) {
+            curriculumContent.style.display = 'block'; // Mostra il contenuto del curriculum
+        } else {
+            window.location.href = 'login.html'; // Reindirizza all'accesso se non è autenticato
+        }
+    </script>
 </body>
 </html>
