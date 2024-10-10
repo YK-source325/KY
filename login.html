@@ -34,5 +34,27 @@
             }
         });
     </script>
+        <script src="script.js"></script>
+    <script>
+        const form = document.getElementById('login-form');
+        const errorMessage = document.getElementById('error-message');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Previene il comportamento predefinito del form
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Verifica le credenziali (esempio semplice)
+            if (username === 'tuoNomeUtente' && password === 'tuaPassword') {
+                sessionStorage.setItem('authenticated', 'true'); // Imposta l'autenticazione
+                window.location.href = 'index.html'; // Reindirizza a index.html se le credenziali sono corrette
+            } else {
+                errorMessage.textContent = 'Nome utente o password errati!'; // Messaggio di errore
+            }
+        });
+    </script>
+</body>
+</html>
+
 </body>
 </html>
