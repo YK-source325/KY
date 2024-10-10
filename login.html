@@ -5,56 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Login</title>
+    <style>
+        /* Stile per centrare il contenuto */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #register {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Accesso</h1>
+        <h2>Accedi</h2>
         <form id="login-form">
-            <input type="text" id="username" placeholder="Nome Utente" required>
+            <input type="text" id="username" placeholder="Nome utente" required>
             <input type="password" id="password" placeholder="Password" required>
             <button type="submit">Accedi</button>
         </form>
-        <p id="error-message" style="color:red;"></p>
+        <div id="register">
+            <a href="#" onclick="showRegistration()">Registrati</a>
+        </div>
     </div>
 
     <script>
-        const form = document.getElementById('login-form');
-        const errorMessage = document.getElementById('error-message');
-
-        form.addEventListener('submit', function(event) {
+        // Funzione per gestire il login
+        document.getElementById('login-form').addEventListener('submit', function(event) {
             event.preventDefault();
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
 
-            // Verifica le credenziali (esempio semplice)
+            // Controlla le credenziali
             if (username === 'tuoNomeUtente' && password === 'tuaPassword') {
-                window.location.href = 'index.html'; // Reindirizza a index.html se le credenziali sono corrette
+                sessionStorage.setItem('authenticated', true);
+                window.location.href = 'index.html'; // Reindirizza a index.html
             } else {
-                errorMessage.textContent = 'Nome utente o password errati!';
+                alert('Credenziali errate, riprova.');
             }
         });
+
+        // Funzione per mostrare il modulo di registrazione
+        function showRegistration() {
+            alert('Funzione di registrazione non implementata ancora.'); // Placeholder per la registrazione
+        }
     </script>
-        <script src="script.js"></script>
-    <script>
-        const form = document.getElementById('login-form');
-        const errorMessage = document.getElementById('error-message');
-
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Previene il comportamento predefinito del form
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            // Verifica le credenziali (esempio semplice)
-            if (username === 'tuoNomeUtente' && password === 'tuaPassword') {
-                sessionStorage.setItem('authenticated', 'true'); // Imposta l'autenticazione
-                window.location.href = 'index.html'; // Reindirizza a index.html se le credenziali sono corrette
-            } else {
-                errorMessage.textContent = 'Nome utente o password errati!'; // Messaggio di errore
-            }
-        });
-    </script>
-</body>
-</html>
-
 </body>
 </html>
