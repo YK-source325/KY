@@ -1,45 +1,57 @@
-```html
-<!DOCTYPE html>
-<html lang="it">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KharaCV</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-<h1>KharaCV</h1>
-<nav>
-<ul>
-<li><a href="#chi-sono">Chi Sono</a></li>
-<li><a href="#curriculum">Curriculum</a></li>
-<li><a href="#portfolio">Portfolio</a></li>
-<li><a href="#contatti">Contatti</a></li>
-</ul>
-</nav>
-</header>
-<main>
-<section id="chi-sono">
-<h2>Chi Sono</h2>
-<p>Inserisci qui una breve biografia e il tuo background professionale.</p>
-</section>
-<section id="curriculum">
-<h2>Curriculum</h2>
-<p>Dettagli sulle tue esperienze lavorative e competenze.</p>
-</section>
-<section id="portfolio">
-<h2>Portfolio</h2>
-<p>Mostra i tuoi progetti e lavori precedenti.</p>
-</section>
-<section id="contatti">
-<h2>Contatti</h2>
-<p>Email: tuoemail@example.com</p>
-</section>
-</main>
-<footer>
-<p>&copy; 2023 KharaCV. Tutti i diritti riservati.</p>
-</footer>
-</body>
-</html>
+```css
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 20px;
+background-color: #f4f4f4;
+}
+
+header {
+background: #333;
+color: #fff;
+padding: 10px 0;
+text-align: center;
+}
+
+nav ul {
+list-style: none;
+padding: 0;
+}
+
+nav ul li {
+display: inline;
+margin: 0 15px;
+}
+
+nav ul li a {
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+}
+
+section {
+background: #fff;
+padding: 20px;
+margin-top: 20px;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+border-bottom: 2px solid #333;
+padding-bottom: 10px;
+}
+
+h3 {
+margin-top: 20px;
+}
+
+footer {
+text-align: center;
+margin-top: 20px;
+padding: 10px 0;
+background: #333;
+color: #fff;
+border-radius: 5px;
+}
 ```
