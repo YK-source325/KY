@@ -1,0 +1,17 @@
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+event.preventDefault(); // Previene l'invio del modulo
+
+const email = document.getElementById('email').value;
+const password = document.getElementById('password').value;
+
+// Qui puoi implementare la logica per autenticare l'utente
+// Per esempio, controllando con una lista di utenti registrati
+
+if (email === "tuo@email.com" && password === "password123") {
+alert("Accesso riuscito!");
+// Reindirizza a una pagina protetta, ad esempio il curriculum
+window.location.href = "index.html"; // Cambia questo con il tuo file
+} else {
+alert("Email o password errati!");
+}
+});
