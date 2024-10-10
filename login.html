@@ -1,17 +1,38 @@
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-event.preventDefault(); // Previene l'invio del modulo
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Accesso</h1>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Nome Utente" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Accedi</button>
+        </form>
+        <p id="error-message" style="color:red;"></p>
+    </div>
 
-const email = document.getElementById('email').value;
-const password = document.getElementById('password').value;
+    <script>
+        const form = document.getElementById('login-form');
+        const errorMessage = document.getElementById('error-message');
 
-// Qui puoi implementare la logica per autenticare l'utente
-// Per esempio, controllando con una lista di utenti registrati
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
 
-if (email === "tuo@email.com" && password === "password123") {
-alert("Accesso riuscito!");
-// Reindirizza a una pagina protetta, ad esempio il curriculum
-window.location.href = "index.html"; // Cambia questo con il tuo file
-} else {
-alert("Email o password errati!");
-}
-});
+            // Verifica le credenziali (esempio semplice)
+            if (username === 'tuoNomeUtente' && password === 'tuaPassword') {
+                window.location.href = 'index.html'; // Reindirizza a index.html se le credenziali sono corrette
+            } else {
+                errorMessage.textContent = 'Nome utente o password errati!';
+            }
+        });
+    </script>
+</body>
+</html>
