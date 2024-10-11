@@ -3,50 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il mio Curriculum</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Benvenuto nel tuo Curriculum</h1>
-    <nav>
-        <a href="login.html">Accedi</a> | <a href="register.html">Registrati</a>
-    </nav>
-    
-    <!-- Il resto del tuo curriculum qui -->
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Curriculum</title>
-</head>
-<body>
-    <h1>Benvenuto nel mio Curriculum</h1>
-    <p><a href="login.html">Accedi al sito</a></p>
-    <div id="curriculum-content" style="display:none;">
-        <!-- Qui puoi inserire il tuo curriculum -->
-        <h2>Informazioni</h2>
-        <p>Nome: Tuo Nome</p>
-        <p>Esperienza: Tua Esperienza</p>
+    <div class="container">
+        <h1>Benvenuto al mio sito</h1>
+        <p>Scegli una delle opzioni per continuare:</p>
+        <a href="login.html" class="button">Accedi</a>
+        <a href="register.html" class="button">Registrati</a>
+        <a href="resume.html" class="button">Vai al Curriculum</a>
     </div>
-
-    <script>
-        const curriculumContent = document.getElementById('curriculum-content');
-
-        // Controlla se l'utente è autenticato
-        const isAuthenticated = sessionStorage.getItem('authenticated');
-
-        if (isAuthenticated) {
-            curriculumContent.style.display = 'block'; // Mostra il contenuto del curriculum
-        } else {
-            window.location.href = 'login.html'; // Reindirizza all'accesso se non è autenticato
-        }
-    </script>
-    <a href="login.html">Accedi al sito</a>
-<br>
-<a href="register.html">Registrati</a>
 </body>
 </html>
