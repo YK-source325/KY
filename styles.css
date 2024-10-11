@@ -1,63 +1,45 @@
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Imposta l'altezza della vista al 100% */
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f4f4f4; /* Colore di sfondo chiaro */
 }
 
-header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
+h1 {
+    margin-bottom: 20px;
 }
 
-header h1 {
-    margin: 0;
-}
-
-main {
+form {
+    background: white;
     padding: 20px;
-    margin: 20px;
-    background: #ffffff;
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #35424a;
+label {
+    display: block;
+    margin-bottom: 5px;
 }
 
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #35424a;
-    color: #ffffff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin: 10px 0;
+input {
+    margin-bottom: 10px;
     padding: 10px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    width: 100%; /* Larghezza del campo di input al 100% */
+    box-sizing: border-box; /* Include padding e border nel calcolo della larghezza */
 }
 
-a {
-    color: #35424a;
-    text-decoration: none;
+button {
+    padding: 10px;
+    background-color: #5cb85c; /* Colore del pulsante */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-a:hover {
-    text-decoration: underline;
+button:hover {
+    background-color: #4cae4c; /* Colore del pulsante al passaggio del mouse */
 }
