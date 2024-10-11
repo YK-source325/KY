@@ -1,31 +1,15 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrazione</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>Registrati</h1>
-    <form id="registrationForm">
-        <label for="username">Nome utente:</label>
-        <input type="text" id="username" name="username" required>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
-        <button type="submit">Registrati</button>
-    </form>
-    <script>
-        document.getElementById('registrationForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Impedisce il comportamento predefinito
-
-            // Qui puoi aggiungere la logica per salvare i dati di registrazione
-            alert('Registrazione completata!');
-            // Reindirizza l'utente alla pagina di login
-            window.location.href = 'login.html';
-        });
-    </script>
-</body>
-</html>
+<form action="/register" method="POST">
+   <label for="name">Nome:</label><br>
+   <input type="text" id="name" name="name" required><br>
+   
+   <label for="surname">Cognome:</label><br>
+   <input type="text" id="surname" name="surname" required><br>
+   
+   <label for="email">Email:</label><br>
+   <input type="email" id="email" name="email" required><br>
+   
+   <label for="password">Password:</label><br>
+   <input type="password" id="password" name="password" required><br>
+   
+   <input type="submit" value="Registrati">
+</form>
